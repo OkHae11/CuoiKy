@@ -21,8 +21,6 @@ public class ShipperRestController {
     public List<Shiper> getShipers() {
         return shipperService.findAll();
     }
-
-
     @PostMapping("/shiper")
     public Shiper save(@RequestBody Shiper shiper) {
         return shipperService.themshiper(shiper);
