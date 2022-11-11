@@ -1,0 +1,5 @@
+package com.example.ShippingService.model;
+
+public class Customer {
+
+}

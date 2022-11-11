@@ -1,0 +1,5 @@
+package com.example.ShippingService.entity;
+
+public class Shiper {
+
+}

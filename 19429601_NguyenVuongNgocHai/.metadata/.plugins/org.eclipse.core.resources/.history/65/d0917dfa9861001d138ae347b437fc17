@@ -1,0 +1,5 @@
+package com.example.CustomerService.rest;
+
+public class CustomerRestController {
+
+}
