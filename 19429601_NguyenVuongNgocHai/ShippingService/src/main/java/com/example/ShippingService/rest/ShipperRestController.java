@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.example.ShippingService.entity.Shiper;
 import com.example.ShippingService.model.ShipperOfCustomer;
 import com.example.ShippingService.service.ShipperService;
@@ -25,8 +26,19 @@ public class ShipperRestController {
     public Shiper save(@RequestBody Shiper shiper) {
         return shipperService.themshiper(shiper);
     }
+    @GetMapping("/shipers/{id}")
+	public Shiper findOne(@PathVariable int id) {
+		List<Shiper> ls= getShipers();
+		for (Shiper shiper : ls) {
+			if(shiper.getCustomerId()== id)
+				return shiper;
+		}
+		return null;
+	}
+    
     @GetMapping("/shiper/{id}")
 	public ShipperOfCustomer getshiOfCustomer(@PathVariable int id) {
 		return shipperService.getShipperOfCustomer(id);
 	}
+    
 }

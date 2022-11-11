@@ -22,6 +22,7 @@ public class CustomerService {
 	}
 	
 	
+	
 //	public Customer getCustomerById(int id) {
 ////		Logger logger = Logger.getLogger(CustomerService.class.getName());
 ////		logger.info("lấy dữ liệu từ db");

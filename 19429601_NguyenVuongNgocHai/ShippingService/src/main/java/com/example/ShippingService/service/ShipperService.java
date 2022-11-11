@@ -1,6 +1,7 @@
 package com.example.ShippingService.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,9 @@ public class ShipperService {
 		Customer cut = restTemplate.getForObject("http://localhost:8002/customer/" + ship.getCustomerId(), Customer.class);
 		ShipperOfCustomer shipperOfCustomer = new ShipperOfCustomer(ship,cut);
 		return shipperOfCustomer;
+	}
+	public Optional<Shiper> findById(Integer id) {
+		return shipperRepository.findById(id);
 	}
 	
 }
